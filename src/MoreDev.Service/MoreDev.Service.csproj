@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\MoreDev.Infra.CrossCutting\MoreDev.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\MoreDev.Infra.Data.SqlServer\MoreDev.Infra.Data.SqlServer.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
