@@ -2,7 +2,7 @@
 
 namespace MoreDev.Domain.Entities
 {
-    public class HelloMoreDev : BaseEntity
+    public class HelloMoreDevEntity : BaseEntity
     {
         [Required]
         [MaxLength(150)]
