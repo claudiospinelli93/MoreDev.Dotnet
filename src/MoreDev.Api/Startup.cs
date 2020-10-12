@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Estudo.Db;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MoreDev.Service.DependecyInjection;
 
 namespace MoreDev.Api
 {
@@ -29,7 +31,8 @@ namespace MoreDev.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            ConfigureBindingsDependencyInjection.RegisterBindings(services,Configuration);
+            services.AddScoped<EstudoService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
