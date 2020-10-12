@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MoreDev.Domain.Entities
 {
+    [Table("HelloMoreDev")]
     public class HelloMoreDevEntity : BaseEntity
     {
         [Required]
