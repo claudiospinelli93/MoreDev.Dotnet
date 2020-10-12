@@ -1,6 +1,6 @@
 ﻿namespace MoreDev.Domain.Interfaces.Repository
 {
-    public interface IHelloMoreDev
+    public interface IHelloMoreDevRepository
     {
     }
 }
